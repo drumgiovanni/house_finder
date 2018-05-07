@@ -1,4 +1,4 @@
-def make_excel(list, sheetname):
+def make_excel(list, sheetname, office):
 	import openpyxl,datetime
 	from openpyxl.styles import Alignment, Border, Side
 
@@ -48,7 +48,7 @@ def make_excel(list, sheetname):
 	for loc in sh['C']:
 		if loc.value != "住所":
 			locinfo = urllib.parse.quote_plus(loc.value)
-			base =f"http://r1web.realwork.jp/index_ex.html?{urllib.parse.quote_plus('アートヴィレッジ大崎セントラルタワー',encoding='utf-8')}&{locinfo}"
+			base =f"http://r1web.realwork.jp/index_ex.html?{urllib.parse.quote_plus(f'{office}',encoding='utf-8')}&{locinfo}"
 			driver.get(base)
 			
 			time.sleep(2)
