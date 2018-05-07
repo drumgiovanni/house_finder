@@ -13,11 +13,12 @@ You can easily find ideal house using this.
 
  move to the directory that you installed this app.
 
-
+  ```
   $ cd hosue_finder
-
+  ```
 
 run the app
 
+  ```
   $ python main.py
-
+  ```
