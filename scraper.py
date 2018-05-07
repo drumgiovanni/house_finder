@@ -99,7 +99,7 @@ def house_finder(url1):
 							room_urls = room_urls[3]
 						room_urls = room_urls.replace('href="', '')
 						room_urls = room_urls.replace('"', '')
-						h_url.append("https://suumo.jp/jj" + room_urls)
+						h_url.append("https://suumo.jp/" + room_urls)
 
 					room_props = tr.find_all('td')
 					for td in room_props:
@@ -161,5 +161,5 @@ def house_finder(url1):
 				infolist.append(j[i])
 			resultlist.append(infolist)
 
-		time.sleep(5)
+		time.sleep(2)
 	return resultlist
